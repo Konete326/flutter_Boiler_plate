@@ -1,8 +1,1 @@
-{
-  "database": {
-    "rules": "database.rules.json"
-  },
-  "storage": {
-    "rules": "storage.rules"
-  }
-}
+{"database":{"rules":"database.rules.json"},"storage":{"rules":"storage.rules"},"flutter":{"platforms":{"android":{"default":{"projectId":"aptech-project-c6558","appId":"1:488213739744:android:d84b0d7b621e8b6f443885","fileOutput":"android/app/google-services.json"}},"dart":{"lib/firebase_options.dart":{"projectId":"aptech-project-c6558","configurations":{"android":"1:488213739744:android:d84b0d7b621e8b6f443885","ios":"1:488213739744:ios:154a05c9e400057c443885","web":"1:488213739744:web:c9ddf3725e6d0bfa443885"}}}}}}

@@ -71,4 +71,5 @@ class DefaultFirebaseOptions {
     storageBucket: 'aptech-project-c6558.firebasestorage.app',
     iosBundleId: 'com.example.project',
   );
+
 }
