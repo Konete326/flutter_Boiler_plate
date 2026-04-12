@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+
 import 'app_colors.dart';
-import 'app_typography.dart';
 import 'app_spacing.dart';
+import 'app_typography.dart';
 
 class AppTheme {
   static ThemeData get dark => ThemeData(
@@ -23,14 +24,6 @@ class AppTheme {
           bodyLarge: kBodyL.copyWith(color: kTextPrimary),
           bodyMedium: kBodyM.copyWith(color: kTextPrimary),
           bodySmall: kBodyS.copyWith(color: kTextSecondary),
-        ),
-        cardTheme: CardTheme(
-          color: kSurfaceDark,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(kRadiusL),
-            side: const BorderSide(color: kBorderDark),
-          ),
-          elevation: 0,
         ),
         inputDecorationTheme: InputDecorationTheme(
           filled: true,
