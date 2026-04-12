@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "skills": {
+    "better-auth-security-best-practices": {
+      "source": "better-auth/skills",
+      "sourceType": "github",
+      "computedHash": "ed38caef4b297cc399d717258d6ea4e6ecb8894c453c83450064c7e7c6e5cc02"
+    },
+    "firebase-auth-basics": {
+      "source": "firebase/agent-skills",
+      "sourceType": "github",
+      "computedHash": "a8fb7b1bfaf9f7d1bd1ebd7e1d2718f42f51361c8b2776ed1cdc17548334fe51"
+    },
+    "firebase-basics": {
+      "source": "firebase/agent-skills",
+      "sourceType": "github",
+      "computedHash": "98d865baea6ebd70723a17c5ca6bb7a9a504fbffddfb10525b08c9d45f7d9a31"
+    },
+    "flutter-animating-apps": {
+      "source": "flutter/skills",
+      "sourceType": "github",
+      "computedHash": "217700e356dae9e3624a54543aa366aca3871aa3c0368856156715e211aeac4c"
+    },
+    "flutter-architecting-apps": {
+      "source": "flutter/skills",
+      "sourceType": "github",
+      "computedHash": "8d4c005971a6dc098557a5511cfd683de25aa88cb595c5bc8b306168c35bc7ab"
+    },
+    "flutter-building-layouts": {
+      "source": "flutter/skills",
+      "sourceType": "github",
+      "computedHash": "9686218c0b724c42ea30e97a3cc081cf4de69b5f3b0aa6253bd012ce9d573834"
+    },
+    "flutter-theming-apps": {
+      "source": "flutter/skills",
+      "sourceType": "github",
+      "computedHash": "0343c87f382a920523c00d9050f675753849a8ab621a19e0b883715418b1a49d"
+    },
+    "frontend-design": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "computedHash": "516bd2154eb843a8240e43d5b285229129853114ad7075a5e141e1c08e408c84"
+    },
+    "pdf": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "computedHash": "37226d4220d844377e6b2a386c51a011df4cd130855ff0b80bcc22f9c28abd57"
+    },
+    "skill-creator": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "computedHash": "57f470f512f45bdac598e302bc72fd62bf2b649fc7fad032efe97720149cde4d"
+    },
+    "uiux-design": {
+      "source": "cna-bootcamp/clauding-guide",
+      "sourceType": "github",
+      "computedHash": "624965deb0fde7bdb7b3ae7731807e5dbed29e6f3e8ec52a064a5f310464ce80"
+    },
+    "webapp-testing": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "computedHash": "5a6a18c0137cfbabec058e86fc1c8f6919d846a7b2a34ee978cc8ced866ee2e5"
+    }
+  }
+}

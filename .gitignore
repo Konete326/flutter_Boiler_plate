@@ -1,0 +1,19 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Secrets
+.env
+.env.*
+! .env.example
+
+# Flutter/Dart
+**/build/
+**/.dart_tool/
+**/.flutter-plugins
+**/.flutter-plugins-dependencies
+**/generated_plugin_registrant.dart
+
+# Firebase Config
+**/google-services.json
+**/GoogleService-Info.plist
