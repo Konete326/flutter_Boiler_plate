@@ -9,13 +9,14 @@ environment:
 
 dependencies:
   cached_network_image: any
+  cloudinary_flutter: any
+  cloudinary_url_gen: any
   cupertino_icons: ^1.0.8
   dio: any
   equatable: any
   firebase_auth: any
   firebase_core: any
   firebase_database: any
-  firebase_storage: any
   flutter:
     sdk: flutter
   flutter_dotenv: any
@@ -26,6 +27,7 @@ dependencies:
   google_fonts: any
   google_sign_in: any
   hooks_riverpod: any
+  intl: any
   shared_preferences: any
 
 dev_dependencies:
@@ -36,3 +38,5 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/env

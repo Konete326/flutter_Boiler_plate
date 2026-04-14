@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
+import '../../core/extensions/context_extension.dart';
 import '../../theme/app_colors.dart';
 
 class AppLoader extends StatelessWidget {
-  const AppLoader({this.size = 24.0, super.key});
-
-  final double size;
+  const AppLoader({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final size = context.wp(10);
     return Center(
       child: SizedBox(
         height: size,

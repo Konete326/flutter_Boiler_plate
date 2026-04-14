@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import '../../../../core/extensions/context_extension.dart';
+import '../../../../theme/app_colors.dart';
 import '../../../../theme/app_spacing.dart';
 import '../../../../theme/app_typography.dart';
-import '../../../../theme/app_colors.dart';
 
 class AuthHeader extends StatelessWidget {
   const AuthHeader({
@@ -17,11 +18,20 @@ class AuthHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const SizedBox(height: kSpace48),
-        Text(title, style: kHeadingXL),
+        SizedBox(height: context.hp(5)),
+        Text(
+          title, 
+          style: kHeadingXL.copyWith(fontSize: context.wp(8)),
+        ),
         const SizedBox(height: kSpace8),
-        Text(subtitle, style: kBodyM.copyWith(color: kTextSecondary)),
-        const SizedBox(height: kSpace32),
+        Text(
+          subtitle, 
+          style: kBodyM.copyWith(
+            color: kTextSecondary,
+            fontSize: context.wp(4),
+          ),
+        ),
+        SizedBox(height: context.hp(4)),
       ],
     );
   }

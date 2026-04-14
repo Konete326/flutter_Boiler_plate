@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../../theme/app_spacing.dart';
+import '../../../../core/extensions/context_extension.dart';
 import '../../../../theme/app_colors.dart';
 import '../../../../theme/app_typography.dart';
 
@@ -18,16 +18,25 @@ class AuthFooter extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: kSpace24),
+      padding: EdgeInsets.symmetric(vertical: context.hp(2)),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(message, style: kBodyS.copyWith(color: kTextSecondary)),
+          Text(
+            message, 
+            style: kBodyS.copyWith(
+              color: kTextSecondary,
+              fontSize: context.wp(3.5),
+            ),
+          ),
           TextButton(
             onPressed: onAction,
             child: Text(
               actionLabel,
-              style: kLabelS.copyWith(color: kPrimary),
+              style: kLabelS.copyWith(
+                color: kPrimary,
+                fontSize: context.wp(3.5),
+              ),
             ),
           ),
         ],

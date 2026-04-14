@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../core/extensions/context_extension.dart';
 import '../../theme/app_colors.dart';
 import '../../theme/app_spacing.dart';
 import '../../theme/app_typography.dart';
@@ -30,7 +31,10 @@ class AppTextField extends StatelessWidget {
       children: [
         Text(
           label,
-          style: kHeadingS.copyWith(color: kTextSecondary),
+          style: kHeadingS.copyWith(
+            color: kTextSecondary,
+            fontSize: context.isMobile ? kHeadingS.fontSize : kHeadingM.fontSize,
+          ),
         ),
         const SizedBox(height: kSpace8),
         TextFormField(
@@ -43,6 +47,10 @@ class AppTextField extends StatelessWidget {
             hintText: hintText,
             prefixIcon: prefixIcon,
             hintStyle: kBodyM.copyWith(color: kTextDisabled),
+            contentPadding: EdgeInsets.symmetric(
+              vertical: context.hp(1.5),
+              horizontal: kSpace16,
+            ),
           ),
         ),
       ],

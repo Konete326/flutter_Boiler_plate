@@ -45,9 +45,11 @@ app.*.map.json
 /android/app/release
 
 # Secrets & Environment
-.env
-.env.*
+# .env
+# .env.*
 ! .env.example
+! assets/env
+! .env
 
 # Firebase configuration
 **/google-services.json

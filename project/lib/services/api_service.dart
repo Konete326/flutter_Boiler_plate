@@ -1,18 +1,13 @@
 import 'package:dio/dio.dart';
-import '../core/constants/api_endpoints.dart';
 
 class ApiService {
-  final Dio _dio = Dio(BaseOptions(
-    baseUrl: ApiEndpoints.baseUrl,
-    connectTimeout: const Duration(seconds: 5),
-    receiveTimeout: const Duration(seconds: 3),
-  ));
+  final Dio _dio = Dio();
 
-  Future<Response> get(String path, {Map<String, dynamic>? queryParameters}) {
-    return _dio.get(path, queryParameters: queryParameters);
+  Future<Response<T>> get<T>(String path, {Map<String, dynamic>? query}) {
+    return _dio.get<T>(path, queryParameters: query);
   }
 
-  Future<Response> post(String path, {dynamic data}) {
-    return _dio.post(path, data: data);
+  Future<Response<T>> post<T>(String path, {dynamic data}) {
+    return _dio.post<T>(path, data: data);
   }
 }

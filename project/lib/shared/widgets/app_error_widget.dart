@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import '../../core/extensions/context_extension.dart';
 import '../../theme/app_colors.dart';
 import '../../theme/app_spacing.dart';
 import '../../theme/app_typography.dart';
@@ -18,11 +18,11 @@ class AppErrorWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Padding(
-        padding: const EdgeInsets.all(kSpace16),
+        padding: EdgeInsets.all(context.wp(5)),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            const Icon(Icons.error_outline, color: kError, size: 48),
+            Icon(Icons.error_outline, color: kError, size: context.wp(12)),
             const SizedBox(height: kSpace16),
             Text(
               message,

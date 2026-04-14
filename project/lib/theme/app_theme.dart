@@ -45,7 +45,6 @@ class AppTheme {
           style: ElevatedButton.styleFrom(
             backgroundColor: kPrimary,
             foregroundColor: Colors.white,
-            minimumSize: const Size.fromHeight(48),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(kRadiusM),
             ),
@@ -60,9 +59,7 @@ class AppTheme {
         scaffoldBackgroundColor: kBackgroundLight,
         colorScheme: const ColorScheme.light(
           primary: kPrimary,
-          onPrimary: Colors.white,
           secondary: kPrimaryLight,
-          surface: kSurfaceLight,
           error: kError,
         ),
         textTheme: TextTheme(

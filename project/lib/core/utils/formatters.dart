@@ -6,7 +6,7 @@ class Formatters {
   }
 
   static String currency(double amount) {
-    return NumberFormat.currency(symbol: '$').format(amount);
+    return NumberFormat.currency(symbol: r'$').format(amount);
   }
 
   static String time(DateTime date) {

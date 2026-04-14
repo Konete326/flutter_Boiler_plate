@@ -1,18 +1,33 @@
 import 'dart:io';
-import 'package:firebase_storage/firebase_storage.dart';
+import 'package:dio/dio.dart';
+import 'package:firebase_database/firebase_database.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 class StorageService {
-  final FirebaseStorage _storage = FirebaseStorage.instance;
+  final Dio _dio = Dio();
+  final FirebaseDatabase _db = FirebaseDatabase.instance;
 
-  Reference _userFolder(String uid) => _storage.ref().child('users').child(uid);
+  Future<String?> uploadImage(String uid, File file) async {
+    try {
+      final cloudName = dotenv.env['CLOUDINARY_CLOUD_NAME'];
+      final uploadPreset = dotenv.env['CLOUDINARY_UPLOAD_PRESET'];
+      final url = 'https://api.cloudinary.com/v1_1/$cloudName/image/upload';
 
-  Future<String> uploadFile(String uid, String fileName, File file) async {
-    final ref = _userFolder(uid).child(fileName);
-    final uploadTask = await ref.putFile(file);
-    return uploadTask.ref.getDownloadURL();
-  }
+      final formData = FormData.fromMap({
+        'file': await MultipartFile.fromFile(file.path),
+        'upload_preset': uploadPreset,
+      });
 
-  Future<void> deleteFile(String uid, String fileName) {
-    return _userFolder(uid).child(fileName).delete();
+      final response = await _dio.post<Map<String, dynamic>>(url, data: formData);
+
+      if (response.statusCode == 200 && response.data != null) {
+        final secureUrl = response.data!['secure_url'] as String;
+        await _db.ref('users/$uid/profile_url').set(secureUrl);
+        return secureUrl;
+      }
+    } catch (_) {
+      return null;
+    }
+    return null;
   }
 }
