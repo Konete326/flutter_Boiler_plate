@@ -11,7 +11,7 @@ class AppTheme {
         scaffoldBackgroundColor: kBackgroundDark,
         colorScheme: const ColorScheme.dark(
           primary: kPrimary,
-          onPrimary: Colors.white,
+          onPrimary: kOnPrimary,
           secondary: kPrimaryLight,
           surface: kSurfaceDark,
           error: kError,
@@ -44,7 +44,7 @@ class AppTheme {
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
             backgroundColor: kPrimary,
-            foregroundColor: Colors.white,
+            foregroundColor: kOnPrimary,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(kRadiusM),
             ),
@@ -69,6 +69,22 @@ class AppTheme {
           bodyLarge: kBodyL.copyWith(color: kTextPrimaryLight),
           bodyMedium: kBodyM.copyWith(color: kTextPrimaryLight),
           bodySmall: kBodyS.copyWith(color: kTextSecondaryLight),
+        ),
+        inputDecorationTheme: InputDecorationTheme(
+          filled: true,
+          fillColor: kSurfaceLight,
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(kRadiusM),
+            borderSide: const BorderSide(color: kBorderLight),
+          ),
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(kRadiusM),
+            borderSide: const BorderSide(color: kBorderLight),
+          ),
+          focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(kRadiusM),
+            borderSide: const BorderSide(color: kPrimary),
+          ),
         ),
       );
 }

@@ -7,19 +7,27 @@ class LocalStorageService {
     _prefs ??= await SharedPreferences.getInstance();
   }
 
+  void _checkInit() {
+    if (_prefs == null) throw StateError('LocalStorageService not initialized');
+  }
+
   Future<void> setString(String key, String value) async {
-    await _prefs?.setString(key, value);
+    _checkInit();
+    await _prefs!.setString(key, value);
   }
 
   String? getString(String key) {
-    return _prefs?.getString(key);
+    _checkInit();
+    return _prefs!.getString(key);
   }
 
   Future<void> remove(String key) async {
-    await _prefs?.remove(key);
+    _checkInit();
+    await _prefs!.remove(key);
   }
 
   Future<void> clear() async {
-    await _prefs?.clear();
+    _checkInit();
+    await _prefs!.clear();
   }
 }

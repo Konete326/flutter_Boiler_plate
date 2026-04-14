@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../core/extensions/context_extension.dart';
 import '../../theme/app_colors.dart';
+import '../../theme/app_spacing.dart';
 
 class AppLoader extends StatelessWidget {
   const AppLoader({super.key});
@@ -13,7 +14,7 @@ class AppLoader extends StatelessWidget {
         height: size,
         width: size,
         child: const CircularProgressIndicator(
-          strokeWidth: 2,
+          strokeWidth: kStrokeWidth,
           valueColor: AlwaysStoppedAnimation<Color>(kPrimary),
         ),
       ),

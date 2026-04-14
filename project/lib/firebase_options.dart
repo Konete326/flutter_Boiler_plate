@@ -53,6 +53,7 @@ class DefaultFirebaseOptions {
     projectId: 'aptech-project-c6558',
     authDomain: 'aptech-project-c6558.firebaseapp.com',
     storageBucket: 'aptech-project-c6558.firebasestorage.app',
+    databaseURL: 'https://aptech-project-c6558-default-rtdb.firebaseio.com',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
@@ -61,6 +62,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '488213739744',
     projectId: 'aptech-project-c6558',
     storageBucket: 'aptech-project-c6558.firebasestorage.app',
+    databaseURL: 'https://aptech-project-c6558-default-rtdb.firebaseio.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
@@ -70,6 +72,7 @@ class DefaultFirebaseOptions {
     projectId: 'aptech-project-c6558',
     storageBucket: 'aptech-project-c6558.firebasestorage.app',
     iosBundleId: 'com.example.project',
+    databaseURL: 'https://aptech-project-c6558-default-rtdb.firebaseio.com',
   );
 
 }

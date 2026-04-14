@@ -9,6 +9,7 @@ const double kSpace32 = 32.0;
 const double kSpace40 = 40.0;
 const double kSpace48 = 48.0;
 const double kSpace64 = 64.0;
+const double kStrokeWidth = 2.0;
 
 const double kRadiusXS = 4.0;
 const double kRadiusS = 8.0;

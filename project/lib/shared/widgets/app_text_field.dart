@@ -51,6 +51,15 @@ class AppTextField extends StatelessWidget {
               vertical: context.hp(1.5),
               horizontal: kSpace16,
             ),
+            errorBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(kRadiusM),
+              borderSide: const BorderSide(color: kError),
+            ),
+            focusedErrorBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(kRadiusM),
+              borderSide: const BorderSide(color: kError),
+            ),
+            errorStyle: kBodyS.copyWith(color: kError),
           ),
         ),
       ],

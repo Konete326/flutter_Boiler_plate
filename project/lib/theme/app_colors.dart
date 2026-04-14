@@ -8,6 +8,7 @@ const kBorderDark = Color(0xFF2A2A38);
 const kPrimary = Color(0xFF6C63FF);
 const kPrimaryLight = Color(0xFF8B85FF);
 const kPrimaryDark = Color(0xFF4A43CC);
+const kOnPrimary = Color(0xFFFFFFFF);
 
 const kSuccess = Color(0xFF34C77B);
 const kError = Color(0xFFFF5C5C);
@@ -24,3 +25,5 @@ const kBorderLight = Color(0xFFE0E0EE);
 
 const kTextPrimaryLight = Color(0xFF0A0A1A);
 const kTextSecondaryLight = Color(0xFF6B6B80);
+
+const kTransparent = Color(0x00000000);

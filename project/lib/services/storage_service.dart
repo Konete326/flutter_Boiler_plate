@@ -25,8 +25,8 @@ class StorageService {
         await _db.ref('users/$uid/profile_url').set(secureUrl);
         return secureUrl;
       }
-    } catch (_) {
-      return null;
+    } catch (e) {
+      rethrow;
     }
     return null;
   }

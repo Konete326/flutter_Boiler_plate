@@ -25,5 +25,15 @@ class AuthRepository {
     return _mapFirebaseUser(credential.user);
   }
 
+  Future<AuthUser?> signUp(String email, String password) async {
+    final credential = await _authService.signUpWithEmail(email, password);
+    return _mapFirebaseUser(credential.user);
+  }
+
+  Future<AuthUser?> signInWithGoogle() async {
+    final credential = await _authService.signInWithGoogle();
+    return credential != null ? _mapFirebaseUser(credential.user) : null;
+  }
+
   Future<void> signOut() => _authService.signOut();
 }
